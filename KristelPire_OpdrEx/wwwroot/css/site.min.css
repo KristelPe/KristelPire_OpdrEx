@@ -1,0 +1,28 @@
+body {
+    padding-top: 50px;
+    padding-bottom: 20px
+}
+
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px
+}
+
+.cars li {
+    display: flex;
+    flex-direction: row
+}
+
+.cars li p:not(:first-of-type) {
+    min-width: 175px;
+    max-width: 300px
+}
+
+.cars li p:first-of-type {
+   width: 135px
+}
+
+.title {
+    font-weight: bold;
+    margin-bottom: -0.75em
+}

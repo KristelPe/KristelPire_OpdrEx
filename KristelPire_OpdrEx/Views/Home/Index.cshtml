@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+<br>
+<br>
+
+<ul class="cars">
+    <li class="title">
+        <p>License plate</p>
+        <p>Owner</p>
+        <p>Car</p>
+    </li>
+
+    <hr>
+
+    <li>
+        <p>1-ONI-997</p>
+        <p>Kristel Pire</p>
+        <p>Datsun 240Z</p>
+    </li>
+    <li>
+        <p>1-ABC-003</p>
+        <p>Nina Drango</p>
+        <p>Dodge Chanllenger SRT Hellcat</p>
+    </li>
+    <li>
+        <p>1-WRX-268</p>
+        <p>Evan Hansen</p>
+        <p>Subaru WRX STI</p>
+    </li>
+    
+    @foreach (var car in Model.Cars)
+    {
+        <li>
+            <p>@($"{car.LicensePlate}")</p>
+            <p>@($"{owner.Firstname} {owner.Lastname}")</p>
+            <p>@($"{type.Brand} {type.Model}")</p>
+        </li>
+    }
+</ul>
