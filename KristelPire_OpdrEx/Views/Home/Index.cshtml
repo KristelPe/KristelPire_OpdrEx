@@ -1,6 +1,12 @@
-﻿@{
+﻿@model CarViewModel
+
+@{
     ViewData["Title"] = "Index";
 }
+
+<br>
+
+<a asp-area="" asp-controller="Home" asp-action="New" asp-route-id="0">Add a new Car!</a>
 
 <br>
 <br>
@@ -33,9 +39,12 @@
     @foreach (var car in Model.Cars)
     {
         <li>
-            <p>@($"{car.LicensePlate}")</p>
-            <p>@($"{owner.Firstname} {owner.Lastname}")</p>
-            <p>@($"{type.Brand} {type.Model}")</p>
+            <p>@car.LicensePlate</p>
+            <p>@car.Owner</p>
+            <p>@car.Brand</p>
+            <p>@car.Color</p>
+            <p>@car.Date.ToLongDateString()</p>
+            <p><a asp-controller="Car" asp-action="Detail" asp-route-id="@car.Id">Edit</a> | <a asp-controller="Car" asp-action="DeleteConfirmed" asp-route-id="@car.Id">Delete</a></p>
         </li>
     }
 </ul>

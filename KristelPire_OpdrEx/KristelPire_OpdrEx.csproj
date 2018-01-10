@@ -12,4 +12,23 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Services\launchSettings.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Data\Owner.cs" />
+    <Compile Remove="Data\Car.cs" />
+    <Compile Remove="Data\Brand.cs" />
+    <Compile Remove="Entities\DatabaseInitializer.cs" />
+    <Compile Remove="Entities\EntityContext.cs" />
+    <Compile Remove="Data\Data\Brand.cs" />
+    <Compile Remove="Data\Data\Car.cs" />
+    <Compile Remove="Data\Data\DatabaseInitializer.cs" />
+    <Compile Remove="Data\Data\EntityContext.cs" />
+    <Compile Remove="Data\Data\Owner.cs" />
+    <Compile Remove="Controllers\HomeController.cs" />
+  </ItemGroup>
 </Project>
